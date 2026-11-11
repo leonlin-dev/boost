@@ -1,0 +1,23 @@
+{
+  "name": "boost",
+  "version": "1.55.0",
+  "upstream": "https://github.com/boostorg/boost.git",
+  "upstream_ref": "boost-1.55.0@04163ac5",
+  "asset": {
+    "url": "https://archives.boost.io/release/1.55.0/source/boost_1_55_0.tar.gz",
+    "filename": "boost.tar.gz",
+    "sha256": "19c4305cd6669f2216260258802a7abc73c1624758294b2cad209d45cc13a767"
+  },
+  "kind": "release-source-asset",
+  "build": {
+    "script": "zw/build.ps1"
+  },
+  "install": {
+    "zw_dir": "BoostLib/Boost_V1.55.0",
+    "copy": [
+      { "from": "dist/unpacked/boost_1_55_0/boost", "to": "boost" },
+      { "from": "dist/lib64-msvc-14.0", "to": "lib64-msvc-14.0" }
+    ]
+  },
+  "patches": []
+}
